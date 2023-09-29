@@ -1,0 +1,21 @@
+﻿@model MVCProject.Models.Currency
+@{
+    ViewData["Title"] = "Currency Menu";
+}
+
+<h3>Input the amount</h3>
+
+@using (var form = Html.BeginForm("CurrencyMenu", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m=>m.valueInput)
+        @Html.TextBoxFor(m=>m.valueInput)
+    </div>
+    
+    <div>
+        
+        <input type="submit" value="Convert" />
+
+    </div>
+
+}
