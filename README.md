@@ -1,5 +1,7 @@
 # MVC_Currency_Converter
-Tech used: ASP.NET MVC, HTML, Razor & C#
+
+
+__Tech used: ASP.NET MVC, HTML, Razor & C#__
 
 
 ![Visual Design](home2.png)
