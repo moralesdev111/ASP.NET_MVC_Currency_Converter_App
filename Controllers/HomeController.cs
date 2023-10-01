@@ -28,10 +28,20 @@ namespace MVCProject.Controllers
         [HttpPost]
         public IActionResult CurrencyMenu(Currency currency)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)                
             {
-                currency.valueOutput = currency.valueInput * 1.06M;
-                return View("Output",currency);
+                
+                if(currency.ConversionDirection == 0)
+                {
+                    currency.valueOutput = currency.valueInput * 1.06M;
+                    return View("Output", currency);
+                }
+                else
+                {
+                    currency.valueOutput = currency.valueInput * 0.85M;
+                    return View("Output", currency);
+                }
+                
             }
             
 

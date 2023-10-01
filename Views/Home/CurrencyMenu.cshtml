@@ -3,19 +3,22 @@
     ViewData["Title"] = "Currency Menu";
 }
 
-<h3>Input the amount</h3>
-
 @using (var form = Html.BeginForm("CurrencyMenu", "Home", FormMethod.Post))
 {
     <div>
-        @Html.LabelFor(m=>m.valueInput)
-        @Html.TextBoxFor(m=>m.valueInput)
+        @Html.LabelFor(m => m.valueInput, "Amount:")
+        @Html.TextBoxFor(m => m.valueInput)
     </div>
-    
+
     <div>
-        
-        <input type="submit" value="Convert" />
-
+        <label for="conversionDirection">Conversion Direction:</label>
+        <select name="conversionDirection" id="conversionDirection" class="form-control">
+            <option value="EurosToDollars">Euros to Dollars</option>
+            <option value="DollarsToEuros">Dollars to Euros</option>
+        </select>
     </div>
 
+    <div>
+        <input type="submit" value="Convert" />
+    </div>
 }

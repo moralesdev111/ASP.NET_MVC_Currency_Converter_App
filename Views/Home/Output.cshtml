@@ -2,7 +2,19 @@
 
 
 <h2>Conversion</h2>
-<p>Currency Amount in € @Model.valueInput</p>
-<p>Resulting Currency in $ <b>@Model.valueOutput</b></p>
+<p>Currency Amount @Model.valueInput</p>
+<p>Resulting Currency <b>@Model.valueOutput</b></p>
 </br>
-<img src="~/images/eurodollar.png" alt="Exchange Rate History" />
+<div>
+@{
+	if(Model.ConversionDirection == ConversionDirection.EurosToDollars)
+		{
+			<img src="~/images/eurodollar.png" alt="Exchange Rate History" />
+		}
+	else
+		{
+			<img src="~/images/dollartoeuro.png" alt="Exchange Rate History" />
+		}
+		
+}
+</div>
